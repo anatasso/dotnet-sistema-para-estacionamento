@@ -6,7 +6,6 @@ namespace DesafioFundamentos.Models
         private decimal precoPorHora = 0;
         private List<string> veiculos = new List<string>();
         public string placa;
-        public int horas;
 
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
@@ -31,7 +30,7 @@ namespace DesafioFundamentos.Models
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
             {
                 Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
-                horas = Convert.ToInt32(Console.ReadLine());
+                int horas = Convert.ToInt32(Console.ReadLine());
 
                 decimal valorTotal = 0;
                 valorTotal = precoInicial + precoPorHora * horas;
